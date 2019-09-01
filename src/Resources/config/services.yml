@@ -1,0 +1,5 @@
+services:
+  ecolos_sylius_ean_plugin.form.extension.type.product_variant:
+    class: Ecolos\SyliusEanPlugin\Form\Extension\ProductVariantTypeExtension
+    tags:
+      - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
