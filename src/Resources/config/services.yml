@@ -1,3 +1,7 @@
+parameters:
+  sylius.form.type.product_variant.validation_groups: [ecolos_sylius_ean_plugin_product_variant]
+  sylius.form.type.product_variant_translation.validation_groups: [ecolos_sylius_ean_plugin_product_variant]
+
 services:
   ecolos_sylius_ean_plugin.form.extension.type.product_variant:
     class: Ecolos\SyliusEanPlugin\Form\Extension\ProductVariantTypeExtension

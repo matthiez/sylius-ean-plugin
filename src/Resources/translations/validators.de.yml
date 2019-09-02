@@ -1,0 +1,3 @@
+ecolos_sylius_ean_plugin:
+  ui:
+    invalid_ean: 'Ungültige EAN'

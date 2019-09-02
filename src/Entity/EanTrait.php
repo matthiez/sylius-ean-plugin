@@ -8,17 +8,17 @@ use Doctrine\ORM\Mapping\Column;
 trait EanTrait
 {
     /**
-     * @Column(type="string", nullable=true)
-     * @var bool|null
+     * @Column(type="bigint", length=13, nullable=true)
+     * @var int|null
      */
     public $ean;
 
-    public function getEan(): ?string
+    public function getEan(): ?int
     {
-        return $this->ean;
+        return (int)$this->ean; // Doctrine converts bigint to string
     }
 
-    public function setEan(?string $ean): void
+    public function setEan(?int $ean): void
     {
         $this->ean = $ean;
     }
