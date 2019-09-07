@@ -1,4 +1,0 @@
-suites:
-    main:
-        namespace: Ecolos\SyliusEanPlugin
-        psr4_prefix: Ecolos\SyliusEanPlugin
