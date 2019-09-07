@@ -6,7 +6,7 @@ namespace Ecolos\SyliusEanPlugin\Form\Extension;
 use Ecolos\SyliusEanPlugin\Validator\Constraints\UpcEan;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType;
 use Symfony\Component\Form\AbstractTypeExtension;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Length;
 
@@ -18,9 +18,15 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('ean', NumberType::class, [
+            ->add('ean', TextType::class, [
                 'label' => 'EAN',
-                'required' => false,
+                "attr" => [
+                    "maxlength" => "13",
+                    "minlength" => "12",
+                    "pattern" => "?<=\s)\d{12,13}(?=\s)",
+                    "spellcheck" => false,
+                    "autocorrect" => false //firefox only
+                ],
                 "constraints" => [
                     new Length([
                         "min" => 12,
@@ -33,7 +39,7 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
                     ])
                 ],
                 "validation_groups" => ["ecolos_sylius_ean_plugin_product_variant"],
-                'html5' => true
+                "required" => false
             ]);
     }
 
@@ -43,5 +49,12 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
     static public function getExtendedTypes(): iterable
     {
         return [ProductVariantType::class];
+    }
+
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults([
+            "ean" => null
+        ]);
     }
 }

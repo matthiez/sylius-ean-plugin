@@ -15,7 +15,7 @@ trait EanTrait
 
     public function getEan(): ?int
     {
-        return null === $this->ean ? null : (int)$this->ean; // Doctrine converts bigint to string
+        return null === $this->ean || "" === $this->ean ? null : (int)$this->ean; // Doctrine converts bigint to string
     }
 
     public function setEan(?int $ean): void
