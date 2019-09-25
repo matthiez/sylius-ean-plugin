@@ -50,11 +50,4 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
     {
         return [ProductVariantType::class];
     }
-
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
-    {
-        $resolver->setDefaults([
-            "ean" => null
-        ]);
-    }
 }
