@@ -107,7 +107,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-timer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit-mock-objects" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/polishsymfonycommunity/symfony-mocker-container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
@@ -211,8 +210,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symplify/coding-standard" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symplify/easy-coding-standard" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symplify/package-builder" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symplify/token-runner" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/thecodingmachine/safe" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/extensions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
