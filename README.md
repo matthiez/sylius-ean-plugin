@@ -1,4 +1,4 @@
-#INSTALLATION:
+# INSTALLATION:
 
 1. Add Github repository to composer.json:
     ```Add repository from Github
@@ -53,9 +53,9 @@
     {{ form_row(form.ean) }}
     ``` 
 
-#USAGE:
+# USAGE:
 Check out the product variant form in the admin section.
 An EAN input should be rendered.
 
-#TODO:
+# TODO:
 - Add tests
